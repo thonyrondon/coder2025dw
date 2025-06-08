@@ -36,6 +36,9 @@ p::selection{
     z-index: 10;
 } */
 
+header{
+    background-color: purple;
+}
 
 header section{
     display: flex; /* Poderes de Flexbox */
@@ -49,7 +52,6 @@ header img{
 }
 
 header h1{
-    color: purple;
     text-align: center;
     font-size: 50px;
     font-style: oblique;
@@ -111,7 +113,7 @@ header h1{
     color: white; /* Asegura que el texto no esté opaco */
     border: 2px solid black;
     padding: 20px;
-    background-color: #000;
+    background-color: red;
 }
 
 .presentacion h2:hover{ /*Pseudo elementos*/
