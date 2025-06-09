@@ -25,9 +25,23 @@ p::selection{
 
 
 
+header{
+    background-color: darkblue;
+}
 
+.nav-link{
+    color: white !important;
+}
 
+.btnc{
+    border: 2px solid white;
+    color: white;
+}
 
+.btnc:hover{
+    background-color: rgb(122, 5, 5);
+    color: white;
+}
 
 /* header{
     background-color: darkblue;
@@ -35,10 +49,6 @@ p::selection{
     top: 0;
     z-index: 10;
 } */
-
-header{
-    background-color: purple;
-}
 
 header section{
     display: flex; /* Poderes de Flexbox */
@@ -52,10 +62,11 @@ header img{
 }
 
 header h1{
-    text-align: center;
+    text-align: start;
     font-size: 50px;
     font-style: oblique;
-    margin-left: 450px;
+    color: white;
+    /* margin-left: 450px; */
     
 }
 
@@ -79,7 +90,7 @@ header h1{
     position: relative; /* Configuración para pseudo-elementos */
     padding-top: 50px;
     text-align: center;
-    height: 280vh;
+    height: 230vh;
     
 }
 
@@ -113,7 +124,7 @@ header h1{
     color: white; /* Asegura que el texto no esté opaco */
     border: 2px solid black;
     padding: 20px;
-    background-color: red;
+    background-color: black;
 }
 
 .presentacion h2:hover{ /*Pseudo elementos*/
@@ -141,7 +152,7 @@ header h1{
 
 .presentacion h5{
     margin-top: 100px;
-    font-size: 20px;
+    font-size: 30px;
 }
 
 
@@ -164,7 +175,7 @@ header h1{
 }
 
 .formularios{
-    height: 150vh;
+    height: 230vh;
     padding-top: 80px;
 }
 
@@ -201,7 +212,7 @@ header h1{
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
-    height: 150vh;
+    height: 230vh;
 }
 
 .nosotros div h2 {
@@ -222,6 +233,10 @@ header h1{
 
 /* PRODUCTOS */
 
+.pro{
+    height: 280vh;
+}
+
 .pro .paso-uno{
     display: flex;
     flex-direction: row;
@@ -236,11 +251,13 @@ header h1{
 }
 
 .tarjeta {
+    margin-top: 15px;
+    margin-left: 15px;
     border: 1px solid black;
     padding: 15px;
     text-align: center;
     width: 250px;
-    height: 75vh;
+    height: 100vh;
 }
 
 .tarjeta img {
@@ -306,7 +323,7 @@ header h1{
 .mapa {
     display: flex;
     flex-direction: column;
-    height: 220vh;
+    height: 230vh;
 }
 
 .mapa section {
@@ -360,6 +377,15 @@ footer{
     padding: 10px;
 }
 
+footer i{
+    color: black;
+    font-size: 50px;
+}
+
+footer div{
+    display: flex;
+    gap: 30px;
+}
 
 footer div img{
     height: 35px;
