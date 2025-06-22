@@ -16,7 +16,7 @@ body{
 }
 
 p::selection{
-    background-color: rgb(97, 11, 11);
+    background-color: green;
 }
 
 /*!-----HEADER-------*/
