@@ -1,0 +1,28 @@
+/* CABECERA */
+
+header{
+    background-color: nth($colors, 5 );
+    position: sticky;
+    top: 0;
+    z-index: 10;
+
+    nav{
+
+    display: flex; /* Poderes de Flexbox */
+    align-items: center; /* Alinea verticalmente */
+    justify-content: flex-start; /* Distribuye elementos horizontalmente */
+
+        img{
+            @extend %img;
+        }
+
+        h1{
+            text-align: start;
+            font-size: nth($px , 5 );
+            font-style: oblique;
+            color: nth($colors, 2 );
+            margin-right: nth($px , 5 );
+        }
+    }
+}
+

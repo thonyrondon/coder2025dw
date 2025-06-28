@@ -1,0 +1,67 @@
+/* PIE DE PAGINA */
+
+$gris-fondo: gray;
+$negro-texto: black;
+
+footer {
+  padding: 10px;
+  background-color: $gris-fondo;
+
+  .grid-total {
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 250px;
+    gap: 0;
+
+    div {
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .grid-indi {
+    display: flex;
+    color: $negro-texto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      list-style: none;
+    }
+  }
+
+  .grid-ind {
+    display: flex;
+    text-align: start;
+    align-items: center;
+    color: $negro-texto;
+
+    h3 {
+      font-size: 50px;
+    }
+  }
+
+  .grid-indiv {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+
+    a {
+      i {
+        color: $negro-texto;
+        font-size: 50px;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: darken($negro-texto, 20%);
+        }
+      }
+    }
+  }
+}

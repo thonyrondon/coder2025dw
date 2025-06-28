@@ -1,0 +1,53 @@
+/* REGISTRO */
+
+
+.formularios {
+  height: 230vh;
+  padding-top: 80px;
+
+  .primer::first-letter {
+    font-size: 70px;
+    color: $verde;
+    font-weight: 900;
+    font-style: oblique;
+  }
+
+  ul {
+    li {
+      padding-top: 30px;
+      margin-left: 30px;
+      list-style: none;
+
+      label {
+        display: inline-block;
+        margin-bottom: 5px;
+      }
+
+      input {
+        padding: 5px;
+        margin-left: 5px;
+
+        &[type="radio"],
+        &[type="checkbox"] {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  div {
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 80px;
+      width: 80px;
+      margin: 40px;
+      object-fit: cover;
+    }
+  }
+
+  section {
+    margin-left: 15px;
+  }
+}

@@ -1,0 +1,51 @@
+/* PRODUCTOS */
+
+.pro {
+  height: 230vh;
+
+  .paso-uno{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;/* NUEVO */
+    flex-wrap: wrap;/* NUEVO */
+    gap: 10px;
+  }
+
+  .tarjeta {
+    margin: 20px;
+    border: 1px solid $negro;
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+    height: 100vh;
+    transition: 1s;/* NUEVO */
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .centrado {
+      ul {
+        list-style: none;
+        display: inline-block;
+
+        li {
+          padding-top: 15px;
+
+          button {
+            &:active {
+              background-color: $verde;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.precio {
+  text-decoration: line-through;
+  color: $rojo;
+}

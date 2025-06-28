@@ -1,0 +1,324 @@
+@charset "UTF-8";
+/* EXTENDS @extends %boton por ejm*/
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tagesschrift&display=swap");
+header nav img {
+  height: 100px;
+  width: 100px;
+}
+
+/* MIXIN   ES COMO UNA FUNCIÓN DE PROGRAMACIÓN*/
+/* RESETEO */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Es importante para los tamaños */
+}
+
+/* Fuente */
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+.nav-link {
+  border: 1px solid white !important;
+  color: white !important;
+}
+
+.nav-link:hover {
+  background-color: green;
+}
+
+.btnc {
+  border: 2px solid white;
+  color: white;
+}
+
+.btnc:hover {
+  background-color: green;
+  color: white;
+}
+
+.fi img { /*ESTE ES EL ICONO FIJO DE WHATSAPP*/
+  position: fixed;
+  height: 70px;
+  bottom: 40px;
+  right: 10px;
+}
+
+p::selection {
+  background-color: green;
+}
+
+/* CABECERA */
+header {
+  background-color: darkblue;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+header nav {
+  display: flex; /* Poderes de Flexbox */
+  align-items: center; /* Alinea verticalmente */
+  justify-content: flex-start; /* Distribuye elementos horizontalmente */
+}
+header nav h1 {
+  text-align: start;
+  font-size: 50px;
+  font-style: oblique;
+  color: white;
+  margin-right: 50px;
+}
+
+/* INDEX */
+.presentacion {
+  position: relative;
+  padding-top: 30px;
+  text-align: center;
+  height: 250vh;
+}
+.presentacion section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.presentacion section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  opacity: 0.5;
+  z-index: -1;
+}
+.presentacion section h2 {
+  margin: 100px 0 80px 0;
+  font-size: 40px;
+  position: relative;
+  color: black;
+  padding: 20px;
+}
+.presentacion section h3 {
+  margin: 80px 0 100px 0;
+  font-size: 30px;
+  position: relative;
+  color: black;
+}
+.presentacion section h4 {
+  font-size: 30px;
+  position: relative;
+  border: 2px solid green;
+  color: white;
+  background-color: green;
+  padding: 40px;
+  display: inline;
+}
+.presentacion section .carru {
+  padding-bottom: 20px;
+  margin: 100px 0;
+}
+
+/* REGISTRO */
+.formularios {
+  height: 230vh;
+  padding-top: 80px;
+}
+.formularios .primer::first-letter {
+  font-size: 70px;
+  color: green;
+  font-weight: 900;
+  font-style: oblique;
+}
+.formularios ul li {
+  padding-top: 30px;
+  margin-left: 30px;
+  list-style: none;
+}
+.formularios ul li label {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.formularios ul li input {
+  padding: 5px;
+  margin-left: 5px;
+}
+.formularios ul li input[type=radio], .formularios ul li input[type=checkbox] {
+  margin-left: 10px;
+}
+.formularios div {
+  display: flex;
+  justify-content: center;
+}
+.formularios div img {
+  height: 80px;
+  width: 80px;
+  margin: 40px;
+  object-fit: cover;
+}
+.formularios section {
+  margin-left: 15px;
+}
+
+/* NOSOTROS */
+.nosotros {
+  color: white;
+  padding: 50px 0;
+  background-image: url("../img/supercar.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 230vh;
+}
+.nosotros div h2 {
+  font-size: 40px;
+  text-align: center;
+  padding: 20px 0;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+.nosotros div p {
+  margin: 0 20px 40px;
+  font-size: 30px;
+}
+
+p::selection {
+  background-color: green;
+}
+
+/* PRODUCTOS */
+.pro {
+  height: 230vh;
+}
+.pro .paso-uno,
+.pro .paso-dos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+}
+.pro .tarjeta {
+  margin: 20px;
+  border: 1px solid black;
+  padding: 15px;
+  text-align: center;
+  width: 250px;
+  height: 100vh;
+}
+.pro .tarjeta img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.pro .tarjeta .centrado ul {
+  list-style: none;
+  display: inline-block;
+}
+.pro .tarjeta .centrado ul li {
+  padding-top: 15px;
+}
+.pro .tarjeta .centrado ul li button:active {
+  background-color: green;
+}
+
+.precio {
+  text-decoration: line-through;
+  color: red;
+}
+
+/* UBICACION */
+.mapa {
+  display: flex;
+  flex-direction: column;
+  height: 250vh;
+}
+.mapa .horario {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+.mapa .horario h2 {
+  margin-top: 80px;
+}
+.mapa .horario h3 {
+  margin-top: 35px;
+  margin-bottom: 20px;
+}
+.mapa .horario ul {
+  list-style: none;
+}
+.mapa .horario ul li {
+  margin-bottom: 20px;
+}
+.mapa section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mapa section a h2 {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  color: blue;
+  text-align: center;
+}
+
+/* PIE DE PAGINA */
+footer {
+  padding: 10px;
+  background-color: gray;
+}
+footer .grid-total {
+  margin: 5px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 250px;
+  gap: 0;
+}
+footer .grid-total div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+footer .grid-indi {
+  display: flex;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+footer .grid-indi ul {
+  list-style: none;
+}
+footer .grid-ind {
+  display: flex;
+  text-align: start;
+  align-items: center;
+  color: black;
+}
+footer .grid-ind h3 {
+  font-size: 50px;
+}
+footer .grid-indiv {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+footer .grid-indiv a i {
+  color: black;
+  font-size: 50px;
+  transition: color 0.3s ease;
+}
+footer .grid-indiv a i:hover {
+  color: black;
+}
+
+/*# sourceMappingURL=estilos.css.map */
