@@ -1,7 +1,6 @@
 /* PIE DE PAGINA */
 
-$gris-fondo: gray;
-$negro-texto: black;
+
 
 footer {
   padding: 10px;
@@ -25,7 +24,7 @@ footer {
 
   .grid-indi {
     display: flex;
-    color: $negro-texto;
+    color: $negro;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -39,7 +38,7 @@ footer {
     display: flex;
     text-align: start;
     align-items: center;
-    color: $negro-texto;
+    color: $negro;
 
     h3 {
       font-size: 50px;
@@ -54,12 +53,12 @@ footer {
 
     a {
       i {
-        color: $negro-texto;
+        color: $negro;
         font-size: 50px;
         transition: color 0.3s ease;
 
         &:hover {
-          color: darken($negro-texto, 20%);
+          color: darken($negro, 20%);
         }
       }
     }

@@ -1,29 +1,36 @@
 /* PRODUCTOS */
 
 .pro {
-  height: 230vh;
+  height: 350vh;
 
-  .paso-uno{
+  .paso-uno {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;/* NUEVO */
-    flex-wrap: wrap;/* NUEVO */
+    justify-content: space-around;
+    flex-wrap: wrap;
     gap: 10px;
   }
 
   .tarjeta {
     margin: 20px;
-    border: 1px solid $negro;
+    border: 1px solid black;
+    background-color: #f5f5f5;
     padding: 15px;
     text-align: center;
     width: 250px;
     height: 100vh;
-    transition: 1s;/* NUEVO */
+    transition: 1s;
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: -3px 6px 26px 10px rgba(0, 0, 0, 0.71);
+      -webkit-box-shadow: -3px 6px 26px 10px rgba(0, 0, 0, 0.71);
+      -moz-box-shadow: -3px 6px 26px 10px rgba(0, 0, 0, 0.71);
+    }
 
     img {
       width: 100%;
       height: 200px;
-      object-fit: cover;
     }
 
     .centrado {
@@ -35,17 +42,20 @@
           padding-top: 15px;
 
           button {
+            background-color: darkblue;
+            color: white;
+
             &:active {
-              background-color: $verde;
+              background-color: green;
             }
           }
         }
       }
     }
-  }
-}
 
-.precio {
-  text-decoration: line-through;
-  color: $rojo;
+    .precio {
+      text-decoration: line-through;
+      color: red;
+    }
+  }
 }

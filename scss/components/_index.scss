@@ -4,8 +4,8 @@
 position: relative;
 padding-top: 30px;
 text-align: center;
-height: 230vh;
-    nav{
+height: 240vh;
+    section{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,7 +18,7 @@ height: 230vh;
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url("../img/banner.png");
+            background-image: $fondo-index;
             @include fondo(cover, no-repeat, top, fixed);
             opacity: 0.5;
             z-index: -1;
@@ -45,12 +45,13 @@ height: 230vh;
             border: 2px solid $verde;
             color: $blanco;
             background-color: $verde;
-            padding: 40px;
+            padding: 20px;
             display: inline;
         }
 
         .carru {
-            padding-bottom: 20px;
+            padding-top: 100px;
+            padding-bottom: 100px;
             margin: 100px 0;
         }
 

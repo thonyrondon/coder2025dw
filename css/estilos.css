@@ -1,12 +1,10 @@
 @charset "UTF-8";
-/* EXTENDS @extends %boton por ejm*/
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tagesschrift&display=swap");
 header nav img {
   height: 100px;
   width: 100px;
 }
 
-/* MIXIN   ES COMO UNA FUNCIÓN DE PROGRAMACIÓN*/
 /* RESETEO */
 * {
   padding: 0;
@@ -46,10 +44,6 @@ body {
   right: 10px;
 }
 
-p::selection {
-  background-color: green;
-}
-
 /* CABECERA */
 header {
   background-color: darkblue;
@@ -75,7 +69,7 @@ header nav h1 {
   position: relative;
   padding-top: 30px;
   text-align: center;
-  height: 250vh;
+  height: 240vh;
 }
 .presentacion section {
   display: flex;
@@ -90,7 +84,7 @@ header nav h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../img/banner.png");
+  background-image: url(../img/banner.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -117,17 +111,18 @@ header nav h1 {
   border: 2px solid green;
   color: white;
   background-color: green;
-  padding: 40px;
+  padding: 20px;
   display: inline;
 }
 .presentacion section .carru {
-  padding-bottom: 20px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   margin: 100px 0;
 }
 
 /* REGISTRO */
 .formularios {
-  height: 230vh;
+  height: 220vh;
   padding-top: 80px;
 }
 .formularios .primer::first-letter {
@@ -175,7 +170,7 @@ header nav h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  height: 230vh;
+  height: 200vh;
 }
 .nosotros div h2 {
   font-size: 40px;
@@ -195,27 +190,34 @@ p::selection {
 
 /* PRODUCTOS */
 .pro {
-  height: 230vh;
+  height: 350vh;
 }
-.pro .paso-uno,
-.pro .paso-dos {
+.pro .paso-uno {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  gap: 30px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .pro .tarjeta {
   margin: 20px;
   border: 1px solid black;
+  background-color: #f5f5f5;
   padding: 15px;
   text-align: center;
   width: 250px;
   height: 100vh;
+  transition: 1s;
+}
+.pro .tarjeta:hover {
+  transform: scale(1.1);
+  box-shadow: -3px 6px 26px 10px rgba(0, 0, 0, 0.71);
+  -webkit-box-shadow: -3px 6px 26px 10px rgba(0, 0, 0, 0.71);
+  -moz-box-shadow: -3px 6px 26px 10px rgba(0, 0, 0, 0.71);
 }
 .pro .tarjeta img {
   width: 100%;
   height: 200px;
-  object-fit: cover;
 }
 .pro .tarjeta .centrado ul {
   list-style: none;
@@ -224,11 +226,14 @@ p::selection {
 .pro .tarjeta .centrado ul li {
   padding-top: 15px;
 }
+.pro .tarjeta .centrado ul li button {
+  background-color: darkblue;
+  color: white;
+}
 .pro .tarjeta .centrado ul li button:active {
   background-color: green;
 }
-
-.precio {
+.pro .tarjeta .precio {
   text-decoration: line-through;
   color: red;
 }
@@ -319,6 +324,104 @@ footer .grid-indiv a i {
 }
 footer .grid-indiv a i:hover {
   color: black;
+}
+
+/**-----MEDIA QUERY--------*/
+@media screen and (max-width: 1260px) {
+  .presentacion section h4 {
+    font-size: 25px;
+  }
+}
+@media screen and (max-width: 1060px) {
+  .presentacion section h4 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 892px) {
+  .pro {
+    height: 650vh;
+  }
+}
+@media screen and (max-width: 860px) {
+  .presentacion section h4 {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 740px) {
+  .nosotros div h2 {
+    font-size: 30px;
+  }
+  .nosotros div p {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .presentacion h4 {
+    display: none;
+  }
+  .presentacion {
+    height: 130vh;
+  }
+}
+@media screen and (max-width: 602px) {
+  .mapa {
+    height: 200vh;
+  }
+  .mapa section iframe {
+    height: 500px;
+    width: 80%;
+  }
+}
+@media screen and (max-width: 591px) {
+  .pro {
+    height: 980vh;
+  }
+}
+@media screen and (max-width: 650px) {
+  .presentacion section h4 {
+    display: none;
+  }
+  .presentacion {
+    height: 160vh;
+  }
+  footer .grid-total {
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 150px;
+  }
+  footer .grid-ind {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .grid-ind h3 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 385px) {
+  .presentacion section h4 {
+    display: none;
+  }
+  .presentacion {
+    height: 160vh;
+  }
+  footer .grid-total {
+    margin: 5px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 150px;
+  }
+  footer .grid-ind {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .grid-ind h3 {
+    font-size: 30px;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

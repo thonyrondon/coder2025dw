@@ -74,7 +74,7 @@ header h1{
     position: relative; /* Configuración para pseudo-elementos */
     padding-top: 30px;
     text-align: center;
-    height: 230vh;
+    height: 200vh;
     
 }
 
@@ -300,6 +300,7 @@ button{
     text-align: center;
 }
 
+
 .mapa .horario h2{
     margin-top: 80px;
 }
@@ -332,7 +333,6 @@ button{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: 250px;
-    gap: 0px;
 }
 
 .grid-total div img{
@@ -388,7 +388,96 @@ footer i{
 }
 
 
-/**-----FOOTER--------*/
+/**-----MEDIA QUERY--------*/
+
+@media screen and (max-width:1150px){
+    .presentacion h4{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:980px){
+    .presentacion h4{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:892px) {
+    .pro {
+        height: 650vh;
+    }
+}
+
+@media screen and (max-width:800px){
+    .presentacion h4{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .nosotros div h2 {
+        font-size: 30px;
+    }
+
+    .nosotros div p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:620px){
+    .presentacion h4{
+        display:none;
+    }
+
+    .presentacion{
+        height: 130vh;
+    }
+}
+
+@media screen and (max-width:602px){
+    .mapa section iframe{
+    height: 500px;
+    width: 80%;
+}
+}
+
+@media screen and (max-width:591px) {
+    .pro {
+        height: 980vh;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .presentacion h4 {
+        display: none;
+    }
+
+    .presentacion {
+        height: 130vh;
+    }
+
+    .grid-total {
+        margin: 5px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 150px;
+    }
+
+    .grid-ind {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .grid-ind h3 {
+        font-size: 30px;
+    }
+
+
+}
+
+
 
 
 

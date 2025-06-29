@@ -4,7 +4,9 @@ $negro: black;
 $rojo: red;
 $azul-link: blue;
 $gris-claro: #f5f5f5;
+$gris-fondo: gray;
 $fondo-nosotros: url("../img/supercar.png");
+$fondo-index: url(../img/banner.png);
 
 $colors:
 green,
@@ -21,16 +23,12 @@ $px:
 40px,
 50px;
 
-/* EXTENDS @extends %boton por ejm*/
 
 %img{
     height: 100px;
     width: 100px;
 }
 
-
-
-/* MIXIN   ES COMO UNA FUNCIÓN DE PROGRAMACIÓN*/
 
 @mixin fondo($size, $repeat, $position,$attach){
     background-size: $size;
